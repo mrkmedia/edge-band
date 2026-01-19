@@ -1,0 +1,289 @@
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ================= COMMON BODY ================= */
+body {
+    background: #c7b9b4;
+    color: #222;
+}
+
+/* =================================================
+   INDEX PAGE HEADER
+================================================= */
+.header {
+    background: #fff;
+    padding: 14px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    flex-wrap: wrap;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+/* INDEX LOGO (ENLARGED) */
+.logo-img {
+    width: 100px;        /* DESKTOP SIZE */
+    height: auto;
+    object-fit: contain;
+}
+
+.brand-text h1 {
+    font-size: 24px;
+}
+
+.brand-text span {
+    color: #a65b2e;
+}
+
+.tagline {
+    font-size: 12px;
+    color: #777;
+}
+
+/* INDEX NAV */
+.nav {
+    display: flex;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+}
+
+/* =================================================
+   ABOUT & PRODUCT HEADER (FULL WIDTH)
+================================================= */
+.navbar {
+    width: 100%;
+    background: #ffffff;
+    border-bottom: 1px solid #ccc;
+}
+
+.navbar-inner {
+    max-width: 1200px;
+    margin: auto;
+    padding: 14px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* LOGO AREA */
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+/* INNER PAGE LOGO */
+.logo-area img {
+    width: 90px;         /* DESKTOP SIZE */
+    height: auto;
+    object-fit: contain;
+}
+
+/* BRAND */
+.brand h1 {
+    font-size: 24px;
+}
+
+.brand p {
+    font-size: 12px;
+    color: #777;
+}
+
+/* NAV */
+.navbar nav {
+    display: flex;
+    gap: 22px;
+}
+
+.navbar nav a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+}
+
+/* ================= BREADCRUMB ================= */
+.breadcrumb {
+    background: #c7b9b4;
+    padding: 14px 20px;
+    font-size: 18px;
+}
+
+/* ================= HERO ================= */
+.hero {
+    min-height: 58vh;
+    background: url("background.jpg") center / cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 20px;
+}
+
+.hero h2 {
+    font-size: 48px;
+}
+
+.hero-box {
+    background: rgba(0,0,0,0.2);
+    padding: 20px 30px;
+}
+
+.hero-box img {
+    width: 320px;
+    max-width: 100%;
+}
+
+/* ================= ABOUT SECTION ================= */
+.section {
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about p {
+    max-width: 700px;
+    margin: auto;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* ================= PRODUCTS ================= */
+.products {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.products img {
+    width: 100%;
+    border-radius: 6px;
+}
+
+.product-boxes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.box {
+    border: 1px solid #333;
+    padding: 14px;
+    font-weight: bold;
+}
+
+.download {
+    margin-top: 30px;
+    font-weight: bold;
+    color: #2f3cff;
+}
+
+/* ================= FOOTER ================= */
+
+.footer,
+footer {
+    background: #2e2e2e;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+
+/* ================= WHATSAPP ================= */
+.whatsapp {
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    background: #25d366;
+    color: #fff;
+    font-size: 22px;
+    padding: 14px 16px;
+    border-radius: 50%;
+    text-decoration: none;
+    z-index: 999;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+
+    .header,
+    .navbar-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .nav,
+    .navbar nav {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .products {
+        grid-template-columns: 1fr;
+    }
+
+    .product-boxes {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h2 {
+        font-size: 32px;
+    }
+
+    /* LOGO SCALE DOWN */
+    .logo-img,
+    .logo-area img {
+        width: 70px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .logo-img,
+    .logo-area img {
+        width: 70px;
+    }
+
+    .hero h2 {
+        font-size: 26px;
+    }
+}
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* This pushes footer down */
+.page-wrapper {
+    flex: 1;
+}
